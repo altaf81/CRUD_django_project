@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete2{% endblock %}
+
+
+{% block body %}
+    <h2>Are you sure you want to delete {{emp.emp_name}}'s record</h2>
+    <form action="/ermsapp/deleteemp2" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="emp_id" value="{{emp.emp_id}}">
+        <input class="btn btn-danger" type="submit" value="Yes">
+        <a class="btn btn-secondary" href="/ermsapp/emplist">No</a>
+    </form>
+{% endblock body %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Form{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Add new Employee here</h2>
+            </div>
+            <div class="col-md-6">
+                {% include 'ermsapp/messages.html' %}
+                <form action="" method="POST" novalidate>
+                    {% csrf_token %}
+                    <table>
+                        {{form.as_table}}
+                    </table>
+                    <tr>
+                        <td><input type="submit" value="Add"></td>
+                    </tr>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

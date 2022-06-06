@@ -1,0 +1,1 @@
+// alert('Hi, Js file is loaded in Django project')
